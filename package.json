@@ -1,0 +1,22 @@
+{
+  "name": "lanxin_synthesis",
+  "version": "0.0.1",
+  "description": "synthesis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liushuxin/lanxin_synthesis.git"
+  },
+  "author": "liushuxin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liushuxin/lanxin_synthesis/issues"
+  },
+  "homepage": "https://github.com/liushuxin/lanxin_synthesis#readme",
+  "dependencies": {
+    "lanxin_chart": "0.0.1-test-1"
+  }
+}
