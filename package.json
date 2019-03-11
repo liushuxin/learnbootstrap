@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/liushuxin/lanxin_synthesis#readme",
   "dependencies": {
-    "lanxin_chart": "0.0.1-test-1"
+    "lanxin_chart": "0.0.1-test-1",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
   }
 }
