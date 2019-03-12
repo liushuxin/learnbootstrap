@@ -19,6 +19,7 @@
   "dependencies": {
     "lanxin_chart": "0.0.1-test-1",
     "react": "^16.8.4",
-    "react-dom": "^16.8.4"
+    "react-dom": "^16.8.4",
+    "webpack": "^4.29.6"
   }
 }
