@@ -19,6 +19,7 @@
   "dependencies": {
     "@types/react": "^16.8.8",
     "@types/react-dom": "^16.8.2",
+    "koa": "^2.7.0",
     "lanxin_chart": "0.0.1-test-1",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
