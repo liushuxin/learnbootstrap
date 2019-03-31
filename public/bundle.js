@@ -95,7 +95,7 @@
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
 // Module
-exports.push([module.i, ".lanxin-home-wrapper {\n  height: 100%;\n  background: #bbb;\n}\n.lanxin-home-wrapper .lanxin-header-wrapper {\n  height: 60px;\n  background: #fff;\n}\n.lanxin-home-wrapper .lanxin-content-wrapper {\n  width: 100%;\n}\n", ""]);
+exports.push([module.i, "html,\nbody,\n#app {\n  height: 100%;\n  margin: 0 0;\n  font-family: PingFangSC-Medium;\n}\n.lanxin-home-wrapper {\n  height: 100%;\n  background: #eee;\n}\n.lanxin-home-wrapper .lanxin-header-wrapper {\n  height: 60px;\n  background: #fff;\n  position: fixed;\n  width: 100%;\n  padding: 0px 100px;\n}\n.lanxin-home-wrapper .lanxin-header-wrapper .header-title {\n  display: inline-block;\n  margin-top: 10px;\n  font-size: 25px;\n  font-weight: 900;\n}\n.lanxin-home-wrapper .lanxin-content-wrapper {\n  width: 100%;\n}\n", ""]);
 
 
 
@@ -25486,7 +25486,8 @@ var App = /** @class */ (function (_super) {
     }
     App.prototype.render = function () {
         return React.createElement("div", { className: "lanxin-home-wrapper" },
-            React.createElement("div", { className: "lanxin-header-wrapper" }, "\u5170\u65B0\u79D1\u6280"),
+            React.createElement("div", { className: "lanxin-header-wrapper" },
+                React.createElement("span", { className: "header-title" }, "\u5170\u65B0\u79D1\u6280")),
             React.createElement("div", { className: "lanxin-content-wrapper" }, "\u6E32\u67D3\u9762\u677F"));
     };
     return App;

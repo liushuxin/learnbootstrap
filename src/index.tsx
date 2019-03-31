@@ -8,7 +8,8 @@ class App extends React.Component<any,any>{
   render(){
     return <div className="lanxin-home-wrapper">
       <div className="lanxin-header-wrapper">
-        兰新科技
+        <span className="header-title">兰新科技</span>
+        
       </div>
       <div className="lanxin-content-wrapper">
 渲染面板
