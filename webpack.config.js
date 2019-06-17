@@ -13,6 +13,9 @@ module.exports = {
     filename: "bundle.js", // string    // 「入口分块(entry chunk)」的文件名模板
     publicPath: "/assets/", // string    // 输出解析文件的目录，url 相对于 HTML 页面
   },
+  resolve:{
+    extensions: ['.js', '.jsx','.ts','.tsx']
+  },
   module: {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
