@@ -1,4 +1,5 @@
 const path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "development", // "production" | "development" | "none"  // Chosen mode tells webpack to use its built-in optimizations accordingly.
@@ -61,7 +62,6 @@ module.exports = {
     index:'index.html'
   },
   plugins: [
-    // ...
+    new HtmlWebpackPlugin()
   ],
-  // 附加插件列表
-  /* 高级配置（点击展示） */}
+ }
