@@ -2,6 +2,7 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.less';
 import Menu from './components/menu/index';
+import Slider from './components/Slider';
 import getThemeContext from './components/themeContext';
 const ThemeContext = getThemeContext();
 class App extends React.Component<any,any>{
@@ -14,8 +15,9 @@ class App extends React.Component<any,any>{
         <span className="header-title">Lanxin Technology</span>
       </div>
       <div className="lanxin-content-wrapper">
-            渲染面板测试文件
-             <ThemeContext.Provider value="金黄色">
+        <Slider></Slider>
+            
+          <ThemeContext.Provider value="金黄色">
           <Menu/>
         </ThemeContext.Provider>
       </div>

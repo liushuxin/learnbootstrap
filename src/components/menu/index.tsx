@@ -48,7 +48,7 @@ const Menu = (props: any) => {
             
 
     },[]);
-    return <div>
+    return <div className="menu-wrapper">
         
         菜单：{state1.count}
         <button onClick={() => dispatch({ type: 'reset' })}>
