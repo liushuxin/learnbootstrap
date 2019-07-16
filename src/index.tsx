@@ -12,7 +12,7 @@ class App extends React.Component<any,any>{
   render(){
     return <div className="lanxin-home-wrapper">
       <div className="lanxin-header-wrapper">
-        <span className="header-title">Lanxin Technology</span>
+        <span className="header-title">兰新同学录</span>
       </div>
       <div className="lanxin-content-wrapper">
         <Slider></Slider>
