@@ -4,6 +4,11 @@ import './index.less';
 import Menu from './components/menu/index';
 import Slider from './components/Slider';
 import getThemeContext from './components/themeContext';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Admin from './page/admin';
+import About from './page/about';
+import HomePage from './page/homePage';
+
 const ThemeContext = getThemeContext();
 class App extends React.Component<any,any>{
   constructor(props:any){
@@ -12,7 +17,29 @@ class App extends React.Component<any,any>{
   render(){
     return <div className="lanxin-home-wrapper">
       <div className="lanxin-header-wrapper">
-        <span className="header-title">Lanxin Graduation Albums</span>
+        <Router>
+          <div className="header-nav">
+          <span className="header-title">Lanxin Graduation Albums</span>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about/">About</Link>
+                </li>
+                <li>
+                  <Link to="/admin/">Users</Link>
+                </li>
+              </ul>
+            </nav>
+
+            <Route path="/" exact component={HomePage} />
+            <Route path="/about/" component={About} />
+            <Route path="/admin/" component={Admin} />
+          </div>
+        </Router>
+        
       </div>
       <div className="lanxin-content-wrapper">
         <Slider></Slider>

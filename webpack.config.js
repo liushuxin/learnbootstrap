@@ -48,7 +48,7 @@ module.exports = {
   // 更改 块加载行为(chunk loading behavior) 和 可用模块(available module)
   //externals: ["react", /^@angular\//],  // 不要遵循/打包这些模块，而是在运行时从环境中请求他们
   // 为 webpack-serve 提供选项
-  stats: "errors-only",  // 精确控制要显示的 bundle 信息
+  //stats: "errors-only",  // 精确控制要显示的 bundle 信息
   devServer: {
     proxy: { // proxy URLs to backend development server
       '/api': 'http://localhost:3000'
