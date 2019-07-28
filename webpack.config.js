@@ -15,7 +15,10 @@ module.exports = {
     publicPath: "/assets/", // string    // 输出解析文件的目录，url 相对于 HTML 页面
   },
   resolve:{
-    extensions: ['.js', '.jsx','.ts','.tsx']
+    extensions: ['.js', '.jsx','.ts','.tsx'],
+    alias:{
+      components: path.resolve(__dirname, './src/components'),
+    }
   },
   module: {
     rules: [
@@ -58,8 +61,15 @@ module.exports = {
     historyApiFallback: true, // true for index.html upon 404, object for multiple paths
     hot: true, // hot module replacement. Depends on HotModuleReplacementPlugin
     https: false, // true for self-signed, object for cert authority
-    noInfo: true, // only errors & warns on hot reload
-    index:'index.html'
+    noInfo: false, // only errors & warns on hot reload
+    index:'index.html',
+    historyApiFallback: true, 
+    historyApiFallback: {
+        // rewrites: [
+        //     { from: /^\/tacos/, to: '/index.html' },
+        // ],
+        index: '/index.html',
+    },
   },
   plugins: [
     new HtmlWebpackPlugin()

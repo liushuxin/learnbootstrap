@@ -1,26 +1,25 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import './index.less';
-import Menu from './components/menu/index';
-import Slider from './components/Slider';
-import getThemeContext from './components/themeContext';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import { HashRouter as Router, Route, Link,Switch } from "react-router-dom";
 import Admin from './page/admin';
 import About from './page/about';
+import AdminAdd from './page/admin/add';
 import HomePage from './page/homePage';
-
-const ThemeContext = getThemeContext();
+import Header from './components/Header';
 class App extends React.Component<any,any>{
   constructor(props:any){
     super(props);
   }
   render(){
     return <div className="lanxin-home-wrapper">
+       <Router>
       <div className="lanxin-header-wrapper">
-        <Router>
+       
           <div className="header-nav">
-          <span className="header-title">Lanxin Graduation Albums</span>
             <nav>
+            <Header></Header>
               <ul>
                 <li>
                   <Link to="/">Home</Link>
@@ -34,21 +33,19 @@ class App extends React.Component<any,any>{
               </ul>
             </nav>
 
-            <Route path="/" exact component={HomePage} />
-            <Route path="/about/" component={About} />
-            <Route path="/admin/" component={Admin} />
+           
           </div>
-        </Router>
+       
         
       </div>
       <div className="lanxin-content-wrapper">
-        <Slider></Slider>
-            
-          <ThemeContext.Provider value="金黄色">
-          <Menu/>
-        </ThemeContext.Provider>
-      </div>
+      <Route path="/" exact component={HomePage} />
+      <Route path="/about/" component={About} />
+      <Route exact  path="/admin" component={Admin}/>
+      <Route exact path="/admin/add/:id" component={AdminAdd}></Route>
       
+      </div>
+      </Router>
     </div>
   }
 

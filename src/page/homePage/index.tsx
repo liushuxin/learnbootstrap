@@ -1,9 +1,15 @@
 import  React from 'react';
+import Menu from 'components/menu/index';
+import Slider from 'components/Slider/index';
+import getThemeContext from 'components/themeContext';
+const ThemeContext = getThemeContext();
 const HomePage = () => {
     return <section>
-        <article>
-            主页导航
-        </article>
+        <Slider></Slider>
+            
+            <ThemeContext.Provider value="金黄色">
+            <Menu/>
+          </ThemeContext.Provider>
     </section>
    
 }
