@@ -9,10 +9,11 @@
         "allowSyntheticDefaultImports":true,
         "esModuleInterop":true,
         "baseUrl": ".",
+        "lib":["dom"],
         "paths": {
             "components/*": [
                 "src/components/*"
-            ]
+            ],
         },
     },
     "include": [

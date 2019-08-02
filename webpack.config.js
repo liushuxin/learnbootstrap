@@ -2,7 +2,7 @@ const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: "development", // "production" | "development" | "none"  // Chosen mode tells webpack to use its built-in optimizations accordingly.
+  mode: "production", // "production" | "development" | "none"  // Chosen mode tells webpack to use its built-in optimizations accordingly.
   entry: "./src/index.tsx", // string | object | array  // 默认为 './src'
   // 这里应用程序开始执行
   // webpack 开始打包
@@ -12,7 +12,9 @@ module.exports = {
     // 所有输出文件的目标路径
     // 必须是绝对路径（使用 Node.js 的 path 模块）
     filename: "bundle.js", // string    // 「入口分块(entry chunk)」的文件名模板
+    chunkFilename: '[name].chunk.js',
     publicPath: "/assets/", // string    // 输出解析文件的目录，url 相对于 HTML 页面
+    
   },
   resolve:{
     extensions: ['.js', '.jsx','.ts','.tsx'],
@@ -23,7 +25,19 @@ module.exports = {
   module: {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
-      { test: /\.tsx?$/, loader: "awesome-typescript-loader" },
+      { test: /\.tsx?$/,
+        use: [
+          {
+            loader: "awesome-typescript-loader"
+          },
+          // {
+          //   loader: 'babel-loader',
+          //   options: {
+          //     plugins: ["@babel/plugin-syntax-dynamic-import"]
+          //   }
+          // }
+        ]
+         },
 
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
