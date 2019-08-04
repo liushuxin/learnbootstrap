@@ -12,7 +12,7 @@ module.exports = {
     // 所有输出文件的目标路径
     // 必须是绝对路径（使用 Node.js 的 path 模块）
     filename: "bundle.js", // string    // 「入口分块(entry chunk)」的文件名模板
-    chunkFilename: '[name].chunk.js',
+    chunkFilename: '[name].js',
     publicPath: "/assets/", // string    // 输出解析文件的目录，url 相对于 HTML 页面
     
   },
@@ -65,6 +65,8 @@ module.exports = {
   // 更改 块加载行为(chunk loading behavior) 和 可用模块(available module)
   //externals: ["react", /^@angular\//],  // 不要遵循/打包这些模块，而是在运行时从环境中请求他们
   // 为 webpack-serve 提供选项
+  optimization:{
+  },
   //stats: "errors-only",  // 精确控制要显示的 bundle 信息
   devServer: {
     proxy: { // proxy URLs to backend development server

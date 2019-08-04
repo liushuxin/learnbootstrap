@@ -9,9 +9,9 @@ import HomePage from './page/homePage';
 import Header from './components/Header';
 const { Suspense, lazy } = React;
 //@ts-ignore
-const About = lazy(() => import('./page/about'));
+const About = lazy(() => import(/* webpackChunkName: "About" */'./page/about'));
 //@ts-ignore
-const Admin = lazy(() => import('./page/admin'));
+const Admin = lazy(() => import(/* webpackChunkName: "Admin" */'./page/admin'));
 class App extends React.Component<any,any>{
   constructor(props:any){
     super(props);
