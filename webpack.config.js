@@ -87,6 +87,10 @@ module.exports = {
         index: '/index.html',
     },
   },
+  externals:{
+    "react":"React",
+    "react-dom":"ReactDOM"
+  },
   plugins: [
     new HtmlWebpackPlugin()
   ],
