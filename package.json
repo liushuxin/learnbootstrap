@@ -29,6 +29,8 @@
     "lanxin_chart": "0.0.1-test-1",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
+    "mobx": "^5.13.0",
+    "mobx-react": "^6.1.3",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^7.1.0",
