@@ -1,4 +1,5 @@
-module.expoerts = {
+module.exports = {
+    "parser":"babel-eslint",
     "extends": "eslint:recommended",
     "plugins": ["prettier"],
     "parserOptions":{
@@ -8,7 +9,6 @@ module.expoerts = {
             "jsx": true
         }
     },
-    "env":{ "es6": true },
     "rules": {
       "prettier/prettier": "error"
     }

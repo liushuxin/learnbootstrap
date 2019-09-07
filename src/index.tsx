@@ -1,18 +1,19 @@
-import  React from "react";
+import   React from "react";
 import * as ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import AdminAdd from "./page/admin/add";
-//@ts-ignore
+// @ts-ignore
 import HomePage from "./page/homePage";
-//@ts-ignore
+// @ts-ignore
 import Header from "./components/Header";
+
 const { Suspense, lazy } = React;
-//@ts-ignore
+// @ts-ignore
 const About = lazy(() =>
   import(/* webpackChunkName: "About" */ "./page/about")
 );
-//@ts-ignore
+// @ts-ignore
 const Admin = lazy(() =>
   import(/* webpackChunkName: "Admin" */ "./page/admin")
 );
@@ -20,6 +21,7 @@ class App extends React.Component<any, any> {
   constructor(props: any) {
     super(props);
   }
+
   render() {
     return (
       <div className="lanxin-home-wrapper">
@@ -28,7 +30,7 @@ class App extends React.Component<any, any> {
             <div className="lanxin-header-wrapper">
               <div className="header-nav">
                 <nav>
-                  <Header></Header>
+                  <Header />
                   <ul>
                     <li>
                       <Link to="/">Home</Link>
@@ -48,7 +50,7 @@ class App extends React.Component<any, any> {
                 <Route path="/" exact component={HomePage} />
                 <Route path="/about/" component={About} />
                 <Route exact path="/admin" component={Admin} />
-                <Route exact path="/admin/add/:id" component={AdminAdd}></Route>
+                <Route exact path="/admin/add/:id" component={AdminAdd} />
               </Switch>
             </div>
           </Suspense>
