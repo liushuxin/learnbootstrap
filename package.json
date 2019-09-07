@@ -5,7 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack --watch"
+    "build": "webpack --watch",
+    "lint": "eslint",
+    "precommit":"eslint src/**/*.{tsx,ts}"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm lint"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": "eslint "
   },
   "repository": {
     "type": "git",
@@ -48,8 +59,11 @@
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
     "csstype": "^2.6.6",
+    "eslint-plugin-prettier": "^3.1.0",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^3.0.5",
+    "lint-staged": "^9.2.5",
     "lodash": "^4.17.14",
     "prettier": "1.18.2",
     "pug": "^2.0.4",

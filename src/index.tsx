@@ -1,4 +1,4 @@
-import * as React from "react";
+    import   React from "react";
 import * as ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
@@ -48,7 +48,7 @@ class App extends React.Component<any, any> {
                 <Route path="/" exact component={HomePage} />
                 <Route path="/about/" component={About} />
                 <Route exact path="/admin" component={Admin} />
-                 <Route exact path="/admin/add/:id" component={AdminAdd}></Route>
+                <Route exact path="/admin/add/:id" component={AdminAdd}></Route>
               </Switch>
             </div>
           </Suspense>
