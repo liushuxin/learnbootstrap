@@ -1,4 +1,4 @@
-import   React from "react";
+import  React from "react";
 import * as ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
