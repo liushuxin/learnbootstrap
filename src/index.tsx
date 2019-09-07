@@ -1,5 +1,5 @@
 import   React from "react";
-import * as ReactDOM from "react-dom";
+import * as  ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import AdminAdd from "./page/admin/add";
