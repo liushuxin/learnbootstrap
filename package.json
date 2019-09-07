@@ -6,17 +6,16 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack --watch",
-    "lint": "eslint",
-    "precommit":"eslint src/**/*.{tsx,ts}"
+    "lint": "eslint --ext .tsx src/index.tsx",
+    "precommit": "eslint"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm lint"
+      "pre-commit": "eslint"
     }
   },
   "lint-staged": {
-    "src/**/*": "eslint "
+    "src/**/*.js": "eslint"
   },
   "repository": {
     "type": "git",
@@ -56,10 +55,17 @@
     "@babel/preset-env": "^7.5.5",
     "@types/react-router-dom": "^4.3.4",
     "@types/webpack-env": "^1.14.0",
+    "@typescript-eslint/parser": "^2.1.0",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "csstype": "^2.6.6",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
     "happypack": "^5.0.1",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.5",
@@ -68,6 +74,7 @@
     "prettier": "1.18.2",
     "pug": "^2.0.4",
     "react-router-dom": "^5.0.1",
+    "reacteslint-plugin-": "^7.14.3",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.3.3333",
     "webpack-dev-server": "^3.2.1"
