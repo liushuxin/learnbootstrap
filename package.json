@@ -6,16 +6,15 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack --watch",
-    "lint": "eslint --ext .tsx src/index.tsx",
-    "precommit": "eslint"
+    "lint": "eslint -c .eslintrc.json --ext .tsx src/index.tsx"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "eslint"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.js": "eslint"
+    "src/**/*.tsx": ["npm run lint"]
   },
   "repository": {
     "type": "git",
