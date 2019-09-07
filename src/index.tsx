@@ -1,8 +1,8 @@
-import   React from "react";
+import React from "react";
 import * as ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
-import   AdminAdd from "./page/admin/add";
+import AdminAdd from "./page/admin/add";
 // @ts-ignore
 import HomePage from "./page/homePage";
 // @ts-ignore
