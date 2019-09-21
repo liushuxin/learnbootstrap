@@ -1,4 +1,4 @@
-import * as React from 'react';
+import  React from 'react';
 let ThemeContext: any = null;
 const getThemeContext = () => {
     if (ThemeContext){

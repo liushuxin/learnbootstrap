@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
-    "build": "webpack --watch",
+    "build": "./node_modules/.bin/webpack --config webpack.config.js",
     "lint": "eslint -c .eslintrc.json --ext .tsx src/index.tsx"
   },
   "husky": {
@@ -14,7 +14,9 @@
     }
   },
   "lint-staged": {
-    "src/**/*.tsx": ["npm run lint"]
+    "src/**/*.tsx": [
+      "npm run lint"
+    ]
   },
   "repository": {
     "type": "git",
@@ -27,10 +29,11 @@
   },
   "homepage": "https://github.com/liushuxin/lanxin_synthesis#readme",
   "dependencies": {
-    "@types/node": "^12.6.8",
-    "@types/react": "^16.8.8",
+    "@storybook/react": "^4.0.0-alpha.3",
     "@types/react-dom": "^16.8.2",
     "@types/react-router": "^5.0.3",
+    "antd": "^3.23.2",
+    "bizcharts": "^3.5.5",
     "css-loader": "^2.1.1",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
@@ -40,19 +43,22 @@
     "less-loader": "^4.1.0",
     "mobx": "^5.13.0",
     "mobx-react": "^6.1.3",
+    "raven-js": "^3.27.2",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-redux": "^7.1.0",
     "react-router": "^5.0.1",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.29.6",
-    "webpack-cli": "^3.2.3"
+    "style-loader": "^0.23.1"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.5.5",
+    "@sentry/webpack-plugin": "^1.8.1",
+    "@types/node": "^12.7.5",
+    "@types/react": "^16.9.2",
     "@types/react-router-dom": "^4.3.4",
+    "@types/storybook__react": "^4.0.2",
     "@types/webpack-env": "^1.14.0",
     "@typescript-eslint/parser": "^2.1.0",
     "awesome-typescript-loader": "^5.2.1",
@@ -73,9 +79,10 @@
     "prettier": "1.18.2",
     "pug": "^2.0.4",
     "react-router-dom": "^5.0.1",
-    "reacteslint-plugin-": "^7.14.3",
     "source-map-loader": "^0.2.4",
-    "typescript": "^3.3.3333",
-    "webpack-dev-server": "^3.2.1"
+    "typescript": "^3.6.2",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8",
+    "webpack-dev-server": "^3.8.1"
   }
 }

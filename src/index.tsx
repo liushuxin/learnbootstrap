@@ -3,19 +3,23 @@ import * as ReactDOM from "react-dom";
 import "./index.less";
 import { HashRouter as Router, Route, Link, Switch } from "react-router-dom";
 import AdminAdd from "./page/admin/add";
-// @ts-ignore
 import HomePage from "./page/homePage";
-// @ts-ignore
 import Header from "./components/Header";
-
+import "antd/dist/antd.less";
+import Raven from "raven-js";
+const DSN = "http://428889ef970440709dec37c5dd626448@localhost:9000/2";
+const release = Raven.config(DSN, {
+  release: "staging@1.0.1"
+}).install();
 const { Suspense, lazy } = React;
-// @ts-ignore
 const About = lazy(() =>
   import(/* webpackChunkName: "About" */ "./page/about")
 );
-// @ts-ignore
 const Admin = lazy(() =>
   import(/* webpackChunkName: "Admin" */ "./page/admin")
+);
+const DataConnection = lazy(() =>
+  import(/* webpackChunkName: "DataConnection" */ "./page/dataCollection")
 );
 class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -41,6 +45,9 @@ class App extends React.Component<any, any> {
                     <li>
                       <Link to="/admin/">Users</Link>
                     </li>
+                    <li>
+                      <Link to="/data/collection/">数据管理</Link>
+                    </li>
                   </ul>
                 </nav>
               </div>
@@ -51,6 +58,11 @@ class App extends React.Component<any, any> {
                 <Route path="/about/" component={About} />
                 <Route exact path="/admin" component={Admin} />
                 <Route exact path="/admin/add/:id" component={AdminAdd} />
+                <Route
+                  exact
+                  path="/data/collection"
+                  component={DataConnection}
+                />
               </Switch>
             </div>
           </Suspense>

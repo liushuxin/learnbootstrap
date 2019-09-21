@@ -1,0 +1,7 @@
+[defaults]
+url=http://localhost:9000
+org=sentry
+project=lanxinjs
+
+[auth]
+token=a31f866285dc43649f3ad2e243ea574889b2d461e54344da8ad7ee6baf04eb93
