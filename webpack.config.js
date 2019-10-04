@@ -108,22 +108,20 @@ module.exports = {
   },
   externals: {
     react: "React",
-    "react-dom": "ReactDOM",
-    bizcharts: "BizCharts",
-    lodash: "_"
+    "react-dom": "ReactDOM"
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: "My App",
       filename: "index.html",
       template: "src/webpack-template/index.html"
-    }),
-    new SentryWebpackPlugin({
-      release: "staging@1.0.1",
-      include: "./public",
-      ignoreFile: "index.html",
-      ignore: ["node_modules", "webpack.config.js"],
-      configFile: "sentry.properties"
     })
+    // new SentryWebpackPlugin({
+    //   release: "staging@1.0.1",
+    //   include: "./public",
+    //   ignoreFile: "index.html",
+    //   ignore: ["node_modules", "webpack.config.js"],
+    //   configFile: "sentry.properties"
+    // })
   ]
 };
