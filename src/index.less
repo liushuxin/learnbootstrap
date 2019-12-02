@@ -1,45 +1,44 @@
-html,body,#app{
-    height:100%;
-    margin:0 0;
-    font-family: PingFangSC-Medium;
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0 0;
+  font-family: PingFangSC-Medium;
 }
-.lanxin-home-wrapper{
-   
-    background: #eee;
-    .lanxin-header-wrapper{
-        height:60px;
-        background:#fff;
-        position:fixed;
-        width: 100%;
-        padding:0px 100px;
-        .header-title{
-            display:inline-block;
-            margin-top:10px;
-            font-size:25px;
-            font-weight: 900;
-        }
-        .header-nav{
-            display:inline-block;
-            width:800px;
-            ul{
-                display:inline-block;
-                li{
-                    display:inline-block;
-                    margin-left:30px;
-                }
-            }
-        
-        }
-
+.lanxin-home-wrapper {
+  background: #eee;
+  .lanxin-header-wrapper {
+    height: 60px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    padding: 0px 100px;
+    z-index: 500;
+    .header-title {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 25px;
+      font-weight: 900;
     }
-    .lanxin-content-wrapper{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding-top: 80px;
-        .menu-wrapper{
-            flex:1,
-            
+    .header-nav {
+      display: inline-block;
+      width: 800px;
+      ul {
+        display: inline-block;
+        li {
+          display: inline-block;
+          margin-left: 30px;
         }
+      }
     }
+  }
+  .lanxin-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 80px;
+    .menu-wrapper {
+      flex: 1;
+    }
+  }
 }

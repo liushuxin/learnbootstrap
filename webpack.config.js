@@ -3,10 +3,12 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 let HappyPack = require("happypack");
 var webpack = require("webpack");
 const SentryWebpackPlugin = require("@sentry/webpack-plugin");
+
+const tsImportPluginFactory = require("ts-import-plugin");
 const release = "staging@1.0.1"; // 可以根据package.json的版本号或者Git的tag命名
 module.exports = {};
 module.exports = {
-  mode: "production", // "production" | "development" | "none"  // Chosen mode tells webpack to use its built-in optimizations accordingly.
+  mode: "development", // "production" | "development" | "none"  // Chosen mode tells webpack to use its built-in optimizations accordingly.
   entry: "./src/index.tsx", // string | object | array  // 默认为 './src'
   // 这里应用程序开始执行
   // webpack 开始打包
@@ -17,7 +19,7 @@ module.exports = {
     // 必须是绝对路径（使用 Node.js 的 path 模块）
     filename: "bundle.js", // string    // 「入口分块(entry chunk)」的文件名模板
     chunkFilename: "[name].js",
-    publicPath: "./" // string    // 输出解析文件的目录，url 相对于 HTML 页面
+    publicPath: "" // string    // 输出解析文件的目录，url 相对于 HTML 页面
   },
   resolve: {
     extensions: [".js", ".jsx", ".ts", ".tsx"],
@@ -29,18 +31,11 @@ module.exports = {
     rules: [
       // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       {
-        test: /\.tsx?$/,
+        test: /\.tsx|ts?$/,
         use: [
           {
             loader: "awesome-typescript-loader"
           }
-
-          // {
-          //   loader: 'babel-loader',
-          //   options: {
-          //     plugins: ["@babel/plugin-syntax-dynamic-import"]
-          //   }
-          // }
         ]
       },
 
@@ -74,7 +69,7 @@ module.exports = {
     ]
   },
 
-  devtool: "source-map", // enum  // 通过在浏览器调试工具(browser devtools)中添加元信息(meta info)增强调试
+  devtool: "cheap-eval-source-map", // enum  // 通过在浏览器调试工具(browser devtools)中添加元信息(meta info)增强调试
   // 牺牲了构建速度的 `source-map' 是最详细的。
   context: __dirname, // string（绝对路径！）
   // webpack 的主目录

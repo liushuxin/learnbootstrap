@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/page/homePage/Text.tsx"],"names":["props"],"mappings":"0FAAA,2BAMe,UALF,SAACA,GACV,OAAO","file":"Text.js","sourcesContent":["import React from 'react';\nconst Text = (props:any) => {\n    return <div>\n        异步加载组件\n    </div>\n}\nexport default Text;"],"sourceRoot":""}

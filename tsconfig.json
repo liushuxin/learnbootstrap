@@ -1,23 +1,21 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "esnext",
-        "target": "es5",
-        "jsx": "react",
-        "allowSyntheticDefaultImports":true,
-        "esModuleInterop":true,
-        "baseUrl": ".",
-        "lib":["dom"],
-        "moduleResolution": "node",
-        "paths": {
-            "components/*": [
-                "src/components/*"
-            ],
-        },
-    },
-    "include": [
-        "./src/**/*"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "esnext",
+    "target": "es5",
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "lib": ["dom"],
+    "moduleResolution": "node",
+    "paths": {
+      "components/*": ["src/components/*"]
+    }
+  },
+  "include": ["./src/**/*"]
 }

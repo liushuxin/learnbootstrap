@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{399:function(n,e,t){"use strict";t.r(e);var u=t(0),a=t.n(u);e.default=function(n){return a.a.createElement("div",null,"异步加载组件")}}}]);
-//# sourceMappingURL=Text.js.map
